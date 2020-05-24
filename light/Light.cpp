@@ -36,6 +36,9 @@ namespace {
 #define BLUE_ATTR(x) STRINGIFY(PPCAT(LEDS(blue), x))
 #define GREEN_ATTR(x) STRINGIFY(PPCAT(LEDS(green), x))
 #define RED_ATTR(x) STRINGIFY(PPCAT(LEDS(red), x))
+
+#define DRM(x) PPCAT(/sys/class/drm/, x)
+#define DSI(x) STRINGIFY(PPCAT(DRM(card0-DSI-1), x))
 /* clang-format on */
 
 using ::android::base::ReadFileToString;
