@@ -15,7 +15,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/xiaomi/sm6150-common/sm6150-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/sm6250-common/sm6250-common-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -37,7 +37,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_CHARACTERISTICS := nosdcard
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2340
+TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
 # Permissions
@@ -91,7 +91,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@5.0-impl:32 \
     android.hardware.soundtrigger@2.2-impl:32 \
     audio.a2dp.default \
-		audio.primary.sm6150:32 \
+    audio.primary.atoll:32 \
     audio.r_submix.default \
     audio.usb.default \
     liba2dpoffload \
@@ -177,12 +177,12 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    gralloc.sm6150 \
-    hwcomposer.sm6150 \
+    gralloc.atoll \
+    hwcomposer.atoll \
     libdisplayconfig \
     libtinyxml \
     libvulkan \
-    memtrack.sm6150 \
+    memtrack.atoll \
     vendor.qti.hardware.display.allocator-service
 
 # Display interfaces
@@ -202,7 +202,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sm6150
+    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sm6250
 
 # FM
 PRODUCT_PACKAGES += \
@@ -261,7 +261,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_sm6150
+    android.hardware.light@2.0-service.xiaomi_sm6250
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -302,7 +302,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3-service.sm6150-libperfmgr \
+    android.hardware.power@1.3-service.sm6250-libperfmgr \
     powerhint.json
 
 PRODUCT_COPY_FILES += \
@@ -383,7 +383,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service \
-    thermal.sm6150
+    thermal.atoll
 
 # Touchscreen
 PRODUCT_PACKAGES += \

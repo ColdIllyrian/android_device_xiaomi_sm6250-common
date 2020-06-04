@@ -6,7 +6,7 @@
 
 BOARD_VENDOR := xiaomi
 
-COMMON_PATH := device/xiaomi/sm6150-common
+COMMON_PATH := device/xiaomi/sm6250-common
 
 # Architecture
 TARGET_ARCH := arm64
@@ -26,7 +26,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a9
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := sm6150
+TARGET_BOOTLOADER_BOARD_NAME := sm6250
 TARGET_NO_BOOTLOADER := true
 
 # Android Verified Boot
@@ -43,11 +43,11 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6150
+TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6250
 TARGET_KERNEL_CLANG_COMPILE := true
 
 # Platform
-TARGET_BOARD_PLATFORM := sm6150
+TARGET_BOARD_PLATFORM := atoll
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
@@ -185,7 +185,7 @@ TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD := true
 VENDOR_SECURITY_PATCH := 2020-05-01
 
 # Sepolicy
-TARGET_SEPOLICY_DIR := msmsteppe
+TARGET_SEPOLICY_DIR := atoll
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/public
@@ -207,4 +207,4 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
--include vendor/xiaomi/sm6150-common/BoardConfigVendor.mk
+-include vendor/xiaomi/sm6250-common/BoardConfigVendor.mk
